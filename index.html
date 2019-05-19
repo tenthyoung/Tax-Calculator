@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tax Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue darken-2">
+            <a href="#" class="brand-logo center">Capital Gains Tax Calculator</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="row">
+            <div id="inputContainer" class="col s7">
+                <h1>Long Term vs. Short Term Tax</h1>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="MM/DD/YYYY" id="datePurchased" type="text" value="11/14/2018">
+                        <label for="datePurchased">Date Purchased</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="" id="moneySpent" type="text" value="26078.68">
+                        <label for="moneySpent">Money Spent</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s4">
+                        <label for="numStocks">Number of Stocks</label>
+                        <input placeholder="Number of Stocks" id="numStocks" type="text" value="151">
+                    </div>
+                    <div class="col s4">
+                        <label for="price">New Price</label>
+                        <input placeholder="360" id="price" type="text" value="4000">
+                    </div>
+                    <div class="col s4">
+                        <label for="revCalc">Revenue</label>
+                        <input placeholder="Auto" id="revCalc" type="text" value="">
+                    </div>
+                </div>
+
+                <p>What will your revenue be after selling it all?</p>
+                <input type="text" id="revenue">
+
+                <a id="submit" class="waves-effect waves-light btn">Submit</a>
+            </div>
+            <div class="col s5 blue lighten-5">
+                <h2>Results</h2>
+                <p>Profit: $<span id="profit"></span></p>
+                <p>Short Term Tax: $<span id="shortTermTax"></span></p>
+                <p>Short Term After Tax: $<span id="afterTaxProfitForShortTerm"></span></p>
+                <p>Long Term Tax: $<span id="longTermTax"></span></p>
+                <p>Long Term After Tax: $<span id="afterTaxProfitForLongTerm"></span></p>
+                <p>Long Term Profits - Short Term Profits: $<span id="longShortDiff"></span></p>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="./assets/javascript/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+</body>
+</html>
